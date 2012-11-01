@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/uBlogsyBaseSite.master" AutoEventWireup="true" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="Head" runat="server">
+
+</asp:Content>
+<asp:Content ContentPlaceHolderID="primarycontent" runat="server">
+  <div class="row-fluid">
+        <div class="span12">
+          <div class="hero-unit">
+            <div class="message">
+            <h1>I design unique &amp; simple Web/Mobile User Interfaces, for memorable User Experiences!
+            Even develop applications to convert a problem to an easy solution.</h1>
+              <p><a href="/about.aspx" class="btn btn-primary btn-large">More about me &raquo;</a></p>
+            </div>
+          </div>
+          </div> <!-- span12 ends -->
+          </div> <!-- row-fluid ends -->
+</asp:Content>  
+  
+<asp:Content ContentPlaceHolderID="LeftCol" runat="server">
+    <div class="uBlogsy_content_bodys row-fluid">
+        <umbraco:Item runat="server" Field="uBlogsyContentBody" />
+        
+    </div>
+
+    <div class="uBlogsy_posts_containers row-fluid">
+        <umbraco:Macro ID="Macro2" Alias="uBlogsyListPosts" ItemCount="5"
+            Small="0" runat="server" PagePramForCache="[@page]" />
+    </div>
+</asp:Content>
