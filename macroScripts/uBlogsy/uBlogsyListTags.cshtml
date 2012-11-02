@@ -29,14 +29,10 @@
 
         // display tags
        
-        <!-- if (tags.Count() > 0){
-            <div> @Dictionary["uBlogsyDicTags"] : </div> 
-        } -->
         if (tags.Count() > 0){
-        <ul class="nav nav-pills postinfo">
-        
-            <li><a href=""><i class="icon-tags"></i> @Dictionary["uBlogsyDicTags"] : </a></li> 
-        
+            <div> @Dictionary["uBlogsyDicTags"] : </div> 
+        }
+        <ul class="uBlogsy_tags">
             @foreach (var t in tags)
             {
                 if (!string.IsNullOrEmpty(t.Trim()))
@@ -45,8 +41,6 @@
                 }
             }    
         </ul>
-        
-        }
     }
     else
     {
@@ -108,9 +102,9 @@
 
         // alphbetise the tags and render
          <div class="uBlogsy_tag_container uBlogsy_bottom_border">
-            <h3>
-                @Dictionary["uBlogsyDicTags"]</h3>
-            <ul class="nav nav-pills">        
+            <h2>
+                @Dictionary["uBlogsyDicTags"]</h2>
+            <ul class="uBlogsy_tags uBlogsy_tag_cloud">        
                 @foreach (var t in tagCloudClassed.OrderBy(x => x.Key))
                 {
                     @Html.Raw(t.Value);

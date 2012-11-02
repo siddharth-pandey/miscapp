@@ -1,7 +1,6 @@
-@using uBlogsy.Common.Extensions;
+﻿@using uBlogsy.Common.Extensions;
 @using uBlogsy.Common.Helpers;
 @using umbraco.MacroEngines;
-@using System;
 @using uBlogsy.BusinessLogic;
 
 @{
@@ -14,53 +13,38 @@
         d = new DynamicNode(Model.Id);
     }
     
-    <div class="row-fluid">
-    <div class="uBlogsy_posts uBlogsy_bottom_borders span12 well well-small">
+    <div class="uBlogsy_post uBlogsy_bottom_border">
         <h2>
             <a href="@d.Url" title="@d.GetProperty("uBlogsyContentTitle")"><span>@d.GetProperty("uBlogsyContentTitle")</span></a></h2>
-        
-        <ul class="breadcrumb">
-            <li><i class="icon-calendar"></i><span class="uBlogsy_post_date"> @d.GetProperty("uBlogsyPostDate").Value.FormatDateTime("dddd MMMM d, yyyy") </span><span class="divider">--</span></li>
-            <li>@RenderPage("/macroScripts/uBlogsy/uBlogsyListAuthors.cshtml", d.Id)</li>
-        </ul>
-       
-        <!-- <h3 class="uBlogsy_post_date">@d.GetProperty("uBlogsyPostDate").Value.FormatDateTime("dddd MMMM d, yyyy") | @RenderPage("/macroScripts/uBlogsy/uBlogsyListAuthors.cshtml", d.Id)</h3> -->
-        
+        <h3 class="uBlogsy_post_date">@d.GetProperty("uBlogsyPostDate").Value.FormatDateTime("dddd MMMM d, yyyy")</h3>
         <div class="uBlogsy_post_body">
-           @RenderImage(d)
            @RenderPostBody(d) 
         </div>
-        
-        
-        
-        <div class="row-fluid">
-        <div class="uBlogsy_comment_count span4">
+
+        @RenderPage("/macroScripts/uBlogsy/uBlogsyListAuthors.cshtml", d.Id)
+
+        <div class="uBlogsy_comment_count">
             @{
                 var comments = CommentService.Instance.GetComments(d.Id, false).ToList();
 
                 if (comments.Count == 0)
                 {
-                    <ul class="nav nav-pills postinfo">
-                     <li><a href="@d.Url" title="@d.GetProperty("uBlogsyContentTitle")"><i class="icon-comment"></i> 0 Comments</a></li>
-                     </ul>
+                     <a href="@d.Url" title="@d.GetProperty("uBlogsyContentTitle")">0 Comments</a>
                 }
                 else
                 {
                     string url = CommentService.Instance.GetCommentUrl(comments.First(), true);
-                    <ul class="nav nav-pills postinfo">
-                     <li><a href="@url" title="Comments"><i class="icon-comment"></i> @comments.Count @Dictionary["uBlogsyDicComments"]</a></li>
-                     </ul>
+                    <a href="@url" title="Comments">@comments.Count @Dictionary["uBlogsyDicComments"]</a>
                 }
             }
         </div>
 
         @*list tags*@
-        <div class="uBlogsy_tag_lists span4"> @RenderPage("/macroScripts/uBlogsy/uBlogsyListTags.cshtml", @d.Id) </div>
+        <div class="uBlogsy_tag_list"> @RenderPage("/macroScripts/uBlogsy/uBlogsyListTags.cshtml", @d.Id) </div>
         
         @*list categories*@
-        <div class="uBlogsy_category_lists span4"> @RenderPage("/macroScripts/uBlogsy/uBlogsyListCategories.cshtml", @d.Id) 
-        </div>
-        </div>
+        <div class="uBlogsy_category_list"> @RenderPage("/macroScripts/uBlogsy/uBlogsyListCategories.cshtml", @d.Id) </div>
+
         @*Social media links*@
         @RenderSocialMedia()
         
@@ -81,9 +65,6 @@
                 }
             </div>
         }
-        
-    </div>
-    
     </div>
 }
 
@@ -133,29 +114,3 @@
         } 
 }
 
-@helper RenderImage(DynamicNode d)
-    {
-        <!-- when no image, just return -->
-        if (String.IsNullOrEmpty(d.GetPropertyValue("uBlogsyImage"))) { return; }
-
-        <!-- get media item -->
-        var media = new DynamicMedia(d.GetPropertyValue("uBlogsyImage"));
-
-        <!-- get imageGen imageurl and css class -->
-        string imageUrl, cssClass;
-
-        if(Model.NodeTypeAlias == "uBlogsyPost")
-        {
-            imageUrl = string.Format("/ImageGen.ashx?image={0}&width=800", media.Url);
-            cssClass = "uBlogsy_image_post";
-        }
-        else
-        {
-            imageUrl = String.Format("/ImageGen.ashx?image={0}&width=400", media.Url);
-            cssClass = "uBlogsy_image_list";
-        }
-
-        <!-- render image -->
-        <img src="@imageUrl" class="@cssClass" />
-
-    }

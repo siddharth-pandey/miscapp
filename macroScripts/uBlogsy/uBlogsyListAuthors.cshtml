@@ -16,21 +16,17 @@
             {
                 authors = GetAuthorOrDefault(d);
 
-                   
-                <span><i class="icon-pencil"></i> @Dictionary["uBlogsyDicPostWrittenBy"]</span> 
-                
+                <span>@Dictionary["uBlogsyDicPostWrittenBy"]</span> 
                 <span class="uBlogsy_author_name">
                 @foreach (var a in authors)
                 {
-                    
-                    <a href="@landing.Url?author=@a.Trim()" title="@a"><i class="icon-pencil"></i>  @a</a>if (a != authors.Last()){<span>,</span>}
-                    
+                    <a href="@landing.Url?author=@a.Trim()" title="@a">@a</a>if (a != authors.Last()){<span>,</span>}
                 }
                 </span> 
             }
             else
             {
-                <span><i class="icon-pencil"></i>  @Dictionary["uBlogsyDicPostWrittenBy"] @landing.GetPropertyValue("uBlogsyGeneralDefaultAuthor")</span>
+                <span>@Dictionary["uBlogsyDicPostWrittenBy"] @landing.GetPropertyValue("uBlogsyGeneralDefaultAuthor")</span>
             }
             <span class="uBlogsy_post_time">@Dictionary["uBlogsyDicPostWrittenAt"] @d.GetProperty("uBlogsyPostDate").Value.FormatDateTime("HH:mm")</span>
         </div>

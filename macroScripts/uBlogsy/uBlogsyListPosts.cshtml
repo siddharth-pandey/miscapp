@@ -17,8 +17,7 @@
         var posts = PostService.Instance.GetPosts(Model.Id);
         nodes = ((IEnumerable<DynamicNode>)posts).Take(count);
         
-        <div class="row-fluid">
-        <div class="uBlogsy_posts_containers uBlogsy_bottom_borders span12">
+        <div class="uBlogsy_posts_container uBlogsy_bottom_border">
         <h2>@Dictionary["uBlogsyDicPostsLatest"]</h2>
             <ul>
                 @foreach (DynamicNode n in nodes)
@@ -31,10 +30,7 @@
                     </li>
                 }
             </ul>
-            <hr>
         </div>
-        </div>
-        
     }
     else
     {

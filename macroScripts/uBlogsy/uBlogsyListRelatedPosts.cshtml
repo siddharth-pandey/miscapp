@@ -38,7 +38,7 @@
    
      if (nodes.Count() > 0)
      {
-        <div class="uBlogsy_related_posts_container">
+        <div class="uBlogsy_related_posts_container uBlogsy_bottom_border">
             <h2>@library.GetDictionaryItem("uBlogsyDicPostsRelated")</h2>
             <ul class="uBlogsy_related">
                 @foreach (DynamicNode n in nodes.Take(count))
@@ -52,7 +52,6 @@
                     </li>
                 }
             </ul>
-            
         </div>
      }
 }

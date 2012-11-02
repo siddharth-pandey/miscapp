@@ -13,7 +13,7 @@ body {
 
 #uBlogsy h1, 
 #uBlogsy h3, 
-#uBlogsy h4 {  }
+#uBlogsy h4 { font-family:Georgia,Serif; color: #505050;}
 
 #uBlogsy p, 
 #uBlogsy label, 
@@ -49,58 +49,58 @@ width: 25%; float: right; display: inline; word-wrap: break-word; overflow: hidd
 #uBlogsy_nav_container { clear:both; height:50px; width:100%; text-align:center;  }
 #uBlogsy_nav { list-style-type:none; display:block; margin:0; padding: 20px 0 0 0px; margin-left: 2%;}
 #uBlogsy_nav li { display:block; float:left; padding-right:30px;}
-#uBlogsy_nav li a { font-size:13px; }
+#uBlogsy_nav li a { font-size:13px; color:#505050;}
 #uBlogsy_nav li a.uBlogsy_current { font-weight:bold; }
 
 /* main header */
 #uBlogsy_header_container { padding: 0; }
 #uBlogsy_header_container h1 { font-size:26px; margin:5px; text-align:center; }
-#uBlogsy_header_container h1 a {   letter-spacing:3px; }
+#uBlogsy_header_container h1 a {font-family:Georgia,Serif;  color:#972323; letter-spacing:3px; }
 #uBlogsy_header_inner {margin:0 50px; padding:0; }
 
 
 /* footer */
 #uBlogsy_footer { padding:0px; margin:30px 0; border-top:1px solid lightgrey; }
-#uBlogsy_footer .uBlogsy_footer_text{  font-size:11px; float:right; margin-top:10px;}
+#uBlogsy_footer .uBlogsy_footer_text{ color:#505050; font-size:11px; float:right; margin-top:10px;}
 
 
 
 /* left column headers */
-#uBlogsy_left_col h3 a {  font-size:18px; font-weight:normal;}
-#uBlogsy_left_col h3 a:hover {}
+#uBlogsy_left_col h3 a { color:#234B7B; font-size:18px; font-weight:normal;}
+#uBlogsy_left_col h3 a:hover {color: #234B7B;}
 #uBlogsy_left_col h3 { margin-top: 5px;}
 #uBlogsy_left_col h2, 
-#uBlogsy_left_col h4 { text-transform:uppercase;  }
+#uBlogsy_left_col h4 { text-transform:uppercase; color:#505050; }
 
 #uBlogsy_left_col h2{ margin-bottom: 0px;}
 
 
 /* right column header */
-#uBlogsy_right_col h2 { text-transform:uppercase;  }
+#uBlogsy_right_col h2 { text-transform:uppercase; color:#505050; }
 
 
 /* links */
-#uBlogsy a {  text-decoration:none; }
+#uBlogsy a { color: #234B7B; text-decoration:none; }
 #uBlogsy a:hover { text-decoration:underline; }
-#uBlogsy_right_col a:hover { }
+#uBlogsy_right_col a:hover {color: #234B7B; }
 
 
 
 /* post, date and author*/
 .uBlogsy_post { padding:10px 0 25px 0;}
-.uBlogsy_author { /*padding-top:30px;*/}
+.uBlogsy_author { padding-top:30px;}
 .uBlogsy_author, 
 .uBlogsy_author_name,
 .uBlogsy_post_date, 
-.uBlogsy_post_time {   font-size:11px;  font-weight:normal;   margin-bottom:0px; }
-#uBlogsy_left_col .uBlogsy_author .uBlogsy_author_name a { font-size:11px;}
+.uBlogsy_post_time { color:#505050; font-family:Georgia,Serif; font-size:11px;  font-weight:normal;   margin-bottom:0px; }
+#uBlogsy_left_col .uBlogsy_author .uBlogsy_author_name a {font-family:Georgia,Serif; font-size:11px;}
 
 .uBlogsy_comment_footer{float:right; overflow:hidden;}
-.uBlogsy_view_commenter_posts{ float:right;  font-size:12px; clear:right;}
+.uBlogsy_view_commenter_posts{ float:right; color:#505050; font-size:12px; clear:right;}
 .uBlogsy_view_commenter_posts a{ font-size:11px;}
 
 .uBlogsy_next_prev{padding-top:40px;overflow: hidden;clear: both;}
-#uBlogsy .uBlogsy_next_prev a {  font-size:13px;}
+#uBlogsy .uBlogsy_next_prev a { color:#505050; font-size:13px;}
 a.uBlogsy_prev {float:left;}
 a.uBlogsy_next {float:right;}
 
@@ -114,11 +114,11 @@ a.uBlogsy_next {float:right;}
 .uBlogsy_comment h2 { font-size:13px; letter-spacing:2.6px; }
 .uBlogsy_comment_name { padding-bottom:10px; }
 .uBlogsy_comment_message { padding-bottom:20px; }
-.uBlogsy_comment_date {float:left; clear:left; margin-top:0px;  text-transform:uppercase;}
+.uBlogsy_comment_date {float:left; clear:left; margin-top:0px; color:#505050; text-transform:uppercase;}
 .uBlogsy_comment_website{ float:right; margin-left:30px; font-size:11px; }
-.uBlogsy_comment_website span{  }
+.uBlogsy_comment_website span{ color:#505050; font-family:Georgia,Serif;}
 
-#uBlogsy_left_col .uBlogsy_post .uBlogsy_comment_count a{font-size:11px;  }
+#uBlogsy_left_col .uBlogsy_post .uBlogsy_comment_count a{font-size:11px; font-family:Georgia,Serif; }
 .uBlogsy_comment_count{overflow:hidden;}
 
 
@@ -144,16 +144,16 @@ a.uBlogsy_next {float:right;}
 
 .uBlogsy_comment_form input[type=submit], 
 .uBlogsy_search input[type=submit] 
-{  background-color:#ffffff; border: 1px solid #cccccc; }
+{ color:#234B7B; background-color:#ffffff; border: 1px solid #cccccc; }
 
-#btnSearch:hover{ }
-#txtSearch{}
+#btnSearch:hover{ color:#234B7B;}
+#txtSearch{color:#cccccc;}
 
 
 
 
 /* right column headers */
-#uBlogsy_right_col h2 { font-size:14px;    font-weight:bold;   margin: 20px 0 0 0; text-transform:uppercase;  }
+#uBlogsy_right_col h2 { font-size:14px;  font-family:Georgia,Serif;  font-weight:bold;   margin: 20px 0 0 0; text-transform:uppercase;  }
 #uBlogsy_right_col > div { padding-bottom:20px;}
 
 
@@ -190,9 +190,9 @@ a.uBlogsy_next {float:right;}
 
 
 /* tags and categories */
-.uBlogsy_tag_list, .uBlogsy_category_list { padding-top:10px;    font-size:11px; }
+.uBlogsy_tag_list, .uBlogsy_category_list { padding-top:10px; color:#505050;  font-family:Georgia,Serif; font-size:11px; }
 .uBlogsy_tag_list > div { float:left; padding-right:5px;}
-.uBlogsy_tag_list .uBlogsy_tags li a, .uBlogsy_category_list .uBlogsy_categories li a{  font-size:11px; }
+.uBlogsy_tag_list .uBlogsy_tags li a, .uBlogsy_category_list .uBlogsy_categories li a{ font-family:Georgia,Serif; font-size:11px; }
 .uBlogsy_tag_list .uBlogsy_tags, .uBlogsy_category_list .uBlogsy_categories{ list-style-type:none; float:left; padding:0; margin:0;}
 .uBlogsy_tag_list .uBlogsy_tags li, .uBlogsy_category_list .uBlogsy_categories li{ display:block; float:left; padding-right:10px;}
 .uBlogsy_category_list{ padding-top:0px;}
@@ -201,7 +201,7 @@ a.uBlogsy_next {float:right;}
 
 
 /* override-tastic! */
-#uBlogsy .uBlogsy_tag_list .uBlogsy_tags li a{  font-size:11px;  }
+#uBlogsy .uBlogsy_tag_list .uBlogsy_tags li a{ font-family:Georgia,Serif; font-size:11px;  }
 
 
 /*add this*/
@@ -213,7 +213,7 @@ a.uBlogsy_next {float:right;}
 #uBlogsy_pagination { display:block; float:right; overflow:hidden;}
 #uBlogsy_pagination li{ list-style-type:none; display:block; float:left; border: 1px solid #CCC; height: 20px; width: 20px; margin:1px;}
 #uBlogsy_pagination li a { font-family: Georgia,Serif; display:block; padding :3px 0 0 6px; font-size:11px;}
-#uBlogsy_pagination li.uBlogsy_page_prev span, #uBlogsy_pagination li.uBlogsy_page_next span { font-family: Georgia,Serif; font-size:11px; display:block; padding :2px 0 0 5px; font-size:12px; }
+#uBlogsy_pagination li.uBlogsy_page_prev span, #uBlogsy_pagination li.uBlogsy_page_next span { font-family: Georgia,Serif; font-size:11px; display:block; padding :2px 0 0 5px; font-size:12px; color:#CCC}
 #uBlogsy_pagination .uBlogsy_page_next, #uBlogsy_pagination .uBlogsy_page_prev{ width:40px;}
 
 #uBlogsy_pagination li.uBlogsy_current a{font-weight:bold;}
@@ -221,7 +221,7 @@ a.uBlogsy_next {float:right;}
 
 /* tag cloud */
 .uBlogsy_tag_cloud li { display:inline-block; padding-right:10px; }
-.uBlogsy_tag_cloud li span {}
+.uBlogsy_tag_cloud li span {color:#505050}
 .uBlogsy_tag_cloud1 { font-size: 11px;}
 .uBlogsy_tag_cloud2 { font-size: 12px;}
 .uBlogsy_tag_cloud3 { font-size: 13px;}
@@ -330,9 +330,6 @@ a.uBlogsy_next {float:right;}
 .uBlogsy_commenter50{}
 /* if you have more than 50 distinct commenters on your post then you're doing well! Add more .uBlogsy_commenter's if you wish */
 
-
-
-/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
 
 
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

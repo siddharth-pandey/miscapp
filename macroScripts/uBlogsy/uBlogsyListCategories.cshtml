@@ -15,11 +15,9 @@
         allCategories.AddRange(categories);
             
         if (allCategories.Count > 0){
-            <div class="uBlogsy_categories_containers">
-            
-                
-                <ul class="nav nav-pills postinfo">
-                    <li><a href=""><i class="icon-tags"></i> @Dictionary["uBlogsyDicCategories"] : </a></li>
+            <div class="uBlogsy_categories_container">
+                <h4>@Dictionary["uBlogsyDicCategories"]  : </h4> 
+                <ul class="uBlogsy_categories">
                     @foreach (var c in allCategories)
                     {
                         if (!string.IsNullOrEmpty(c.Trim()))
@@ -45,10 +43,9 @@
             
         if (categories.Count() > 0){
             // display categories
-            <div class="row-fluid">
-            <div class="span12">
-                 <h3>@Dictionary["uBlogsyDicCategoriesAll"]</h3>
-                <ul class="nav nav-pills">
+            <div class="uBlogsy_categories_container uBlogsy_bottom_border">
+                 <h2>@Dictionary["uBlogsyDicCategoriesAll"] </h2>
+                <ul class="uBlogsy_categories">
                    
                     
                     @foreach (var c in categories)
@@ -59,8 +56,6 @@
                         }
                     }
                 </ul>
-                <hr>
-            </div>
             </div>
         }
     }
