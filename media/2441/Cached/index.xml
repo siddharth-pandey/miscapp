@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <image>
+    <originalFileName>autosave.jpg</originalFileName>
+    <size>6891</size>
+    <dateLastModified>Wed, 24 Oct 2012 21:46:08 GMT</dateLastModified>
+    <width>640</width>
+    <height>480</height>
+    <cachedImage>
+      <fileName>e5jilc2c.jpeg</fileName>
+      <dateCreated>Wed, 24 Oct 2012 21:51:19 GMT</dateCreated>
+      <dateLastAccessed>Tue, 30 Oct 2012 01:34:57 GMT</dateLastAccessed>
+      <imageFormat>jpeg</imageFormat>
+      <compression>90</compression>
+      <width>800</width>
+      <height>600</height>
+      <bgColor>#FFFFFF</bgColor>
+      <transparent>True</transparent>
+      <border>0</border>
+      <borderColor>#000000</borderColor>
+      <constrain>False</constrain>
+      <pad>False</pad>
+    </cachedImage>
+    <cachedImage>
+      <fileName>0xuov1i2.jpeg</fileName>
+      <dateCreated>Fri, 26 Oct 2012 11:42:18 GMT</dateCreated>
+      <dateLastAccessed>Tue, 30 Oct 2012 09:27:50 GMT</dateLastAccessed>
+      <imageFormat>jpeg</imageFormat>
+      <compression>90</compression>
+      <width>400</width>
+      <height>300</height>
+      <bgColor>#FFFFFF</bgColor>
+      <transparent>True</transparent>
+      <border>0</border>
+      <borderColor>#000000</borderColor>
+      <constrain>False</constrain>
+      <pad>False</pad>
+    </cachedImage>
+  </image>
+</imageIndex>
